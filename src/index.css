@@ -1,11 +1,11 @@
-body {
+:root {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #080808;
+  background-color: aqua;
 }
 
 code {
@@ -15,6 +15,7 @@ code {
 
 .container {
   align-items: center;
+  justify-content: center;
 }
 
 
@@ -23,17 +24,17 @@ code {
   justify-content: center;
   text-align: center;
   align-items: center;
-  position: relative;
+  /* position: relative; */
   border-radius: .25rem;
   box-shadow: 10px 10px 25px 10px rgba(228,117,150);
   background-color: white;
   transform-style: preserve-3d;
-  height: 350px;
-  width: 300px;
+  height: 45em;
+  width: 35em;
   transform: perspective(1000px) rotateY(var(--rotate-y, 0));
   cursor: pointer;
   transition: 150ms;
-  margin: 5rem;
+  margin: 8rem;
 }
 
 .card:hover {
@@ -48,6 +49,7 @@ code {
   position: absolute;
   padding: 1rem;
   backface-visibility: hidden;
+  font-size: larger;
 }
 
 .card .back {
@@ -60,3 +62,20 @@ code {
   font-size: 0.8rem;
 }
 
+.carousel-indicators {
+  background-color: #080808;
+  /* width: 100%; */
+  padding: 2em 0;
+  justify-content: center;
+
+}
+
+.carousel-inner {
+  background-color: aqua;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: bisque;
+}

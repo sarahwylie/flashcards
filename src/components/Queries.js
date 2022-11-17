@@ -22,6 +22,11 @@ const queries = [
       question: 'What is the command to create a React app?',
       answer: 'npx create-react-app <app-name>',
       source: 'https://create-react-app.dev/'
+    },
+    {
+      id: 5,
+      question: 'What is the different between let, const, and var?',
+      
     }
   ]
 
