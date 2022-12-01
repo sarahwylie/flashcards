@@ -46,6 +46,24 @@ const queries = [
       question: 'What is a Linked List?',
       answer: 'A linear data structure in which elements are linked using pointers. The Linked List consists of nodes, and each node contains a data field and a reference link to the next node in the list.',
       source: 'https://www.geeksforgeeks.org/data-structures/linked-list/'
+    },
+    {
+      id: 9,
+      question: 'What is Object Oriented Programming?',
+      answer: 'A paradigm that allows us to think of real-world object and relate that to our code.',
+      source: 'William Marttala'
+    },
+    {
+      id: 10,
+      question: 'What are the four pillars of OOP?',
+      answer: 'Abstraction; Encapsulation; Inheritance; Polymorphism.',
+      source: 'https://www.freecodecamp.org/news/four-pillars-of-object-oriented-programming/'
+    },
+    {
+      id: 11,
+      question: 'What is an S-expression?',
+      answer: 'In computer programming, an S-expression (or symbolic expression, abbreviated as sexpr or sexp) is an expression in a like-named notation for nested list (tree-structured) data. S-expressions were invented for and popularized by the programming language Lisp, which uses them for source code as well as data.',
+      source: 'https://en.wikipedia.org/wiki/S-expression'
     }
   ]
 

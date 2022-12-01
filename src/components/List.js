@@ -1,42 +1,62 @@
 import { useState } from 'react';
 import Flashcards from "./Flashcards";
 import '../index.css';
-// import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
-import 'bootstrap/dist/css/bootstrap.css';
-// import Carousel from 'react-bootstrap/Carousel';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+// import Tracker from './Tracker';
+// import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const List = ({ queries }) => {
 
     const [index, setIndex] = useState(0);
 
-    const handleNext = (selectedIndex, e) => {
+    const slideRight = e => {
         e.preventDefault();
-        setIndex(selectedIndex);
+        if (index + 1 <= queries.length - 1) {
+            setIndex(index + 1);
+        }
     };
 
-    const handlePrev = (selectedIndex, e) => {
+    const slideLeft = e => {
         e.preventDefault();
-        setIndex(selectedIndex);
+        if (index - 1 >= 0) {
+            setIndex(index - 1);
+        }
     };
+
+    // const handlePageChange = (page) => {
+    //     let n = page - index;
+    //     setIndex(index + n);
+    // };
 
     return (
         <div>
-            <div key={index}>
-                {queries.map(query => {
-                    return <div>
-                        <div className="active carousel-item">
-                            <Flashcards key={query.id} query={query} style={{ width: '100%' }} />
-                        </div>
-                        <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" onSelect={handlePrev} data-slide="prev">
-                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        </a>
-                        <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" onSelect={handleNext} data-slide="next">
-                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        </a>
-                    </div>
-                })}
-            </div>
-
+            <Row>
+                <Col className='arrow-col'>
+                    <FontAwesomeIcon icon={faChevronLeft} onClick={slideLeft} size="5x" className='arrow' border />
+                </Col>
+                <Col key={index} className="card-container" sm={8}>
+                    {queries.map((query, n) => {
+                        let position = n > index ? "nextCard" : n === index ? "activeCard" : "prevCard";
+                        return <Flashcards key={query.id} query={query} cardStyle={position} style={{ width: '100%' }} />
+                    })}
+                </Col>
+                <Col>
+                    {/* <FontAwesomeIcon icon={faChevronLeft} onClick={slideLeft}/> */}
+                    {/* <button onClick={slideLeft} className="leftBtn">
+                        <FaChevronLeft color="pink" fontSize="3em" />
+                    </button>
+                    <button onClick={slideRight} className="rightBtn">
+                        <FaChevronRight color="pink" fontSize="3em" />
+                    </button> */}
+                    <FontAwesomeIcon icon={faChevronRight} onClick={slideRight} size="5x" className='arrow' border />
+                </Col>
+            </Row>
+            {/* <Row>
+                <Tracker queryLength={queries.length} activeIndex={index} handlePageChange={handlePageChange} />
+            </Row> */}
         </div>
     );
 }
