@@ -64,6 +64,12 @@ const queries = [
       question: 'What is an S-expression?',
       answer: 'In computer programming, an S-expression (or symbolic expression, abbreviated as sexpr or sexp) is an expression in a like-named notation for nested list (tree-structured) data. S-expressions were invented for and popularized by the programming language Lisp, which uses them for source code as well as data.',
       source: 'https://en.wikipedia.org/wiki/S-expression'
+    },
+    {
+      id: 12,
+      question: 'What are the naming rules for variables in C#?',
+      answer: 'Alphanumeric characters and the underscore character are allowed. Names cannot begin with a number and cannot be a keyword (such as string or int).',
+      source: 'https://learn.microsoft.com/en-us/training/modules/csharp-literals-variables/4-exercise-variables'
     }
   ]
 
