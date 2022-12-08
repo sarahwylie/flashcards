@@ -1,12 +1,11 @@
 import { useState } from "react";
 import '../index.css'
 
-const Flashcards = ({ query, cardStyle }) => {
+const Flashcards = ({ query }) => {
     const [flip, setFlip] = useState(false);
 
     return (
-        <div className={`current-card ${cardStyle}`}>
-            <div className={`card ${flip ? 'flip' : ''}`} onClick={() => setFlip(!flip)} style={{ width: '100%' }}>
+        <div className={`card ${flip ? 'flip' : ''}`} onClick={() => setFlip(!flip)}>
                 <div className='front'>
                     {query.question}
                 </div>
@@ -15,7 +14,6 @@ const Flashcards = ({ query, cardStyle }) => {
                     <div className="source">Source: {query.source}</div>
                 </div>
             </div>
-        </div>
     );
 }
 

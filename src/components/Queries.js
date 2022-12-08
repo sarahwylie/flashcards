@@ -70,6 +70,24 @@ const queries = [
       question: 'What are the naming rules for variables in C#?',
       answer: 'Alphanumeric characters and the underscore character are allowed. Names cannot begin with a number and cannot be a keyword (such as string or int).',
       source: 'https://learn.microsoft.com/en-us/training/modules/csharp-literals-variables/4-exercise-variables'
+    },
+    {
+      id: 13,
+      question: 'What is a class?',
+      answer: 'A class is a data type that acts as a template definition for a particular kind of object.',
+      source: 'https://learn.microsoft.com/en-us/training/modules/python-object-oriented-programming/3-model-your-game'
+    },
+    {
+      id: 14,
+      question: 'What does the @property decorator do in Python?',
+      answer: 'Creates a backing field: When you decorate a function with the @property decorator, it creates a backing private field. You can override this behavior if you want, but it is nice to have a default behavior. Identifies a setter: A setter method can change the backing field. Identifies a getter: This function should return the backing field. Identifies a delete function: This function can delete the field.',
+      source: 'https://learn.microsoft.com/en-us/training/modules/python-object-oriented-programming/5-game-transitions-with-methods'
+    },
+    {
+      id:15,
+      question: 'How do you encapsulate an object to make it private in Python?',
+      answer: 'Add double underscores before and after (__object__)',
+      source: 'https://learn.microsoft.com/en-us/training/modules/python-object-oriented-programming/6-exercise-game-transitions-with-methods'
     }
   ]
 

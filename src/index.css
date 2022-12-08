@@ -1,46 +1,47 @@
 :root {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: #faf9f6; */
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.container {
-  width: 100%;
-  /* align-items: center; */
-  background-color: #faf9f6;
+body {
+  background-color: #c8d0d2;
 }
 
-.current-card {
-  /* display: flex; */
-  /* justify-content: center;
-  text-align: center;
-  align-items: center; */
-  /* position: relative; */
-  border-radius: 0.5rem;
-  box-shadow: 0 0 5px 2px rgba(228, 117, 150, 0.3);
-  /* background-color: #f6f6ff; */
-  transform-style: preserve-3d;
-  height: 80%;
-  width: 40%;
-  transform: perspective(1000px) rotateY(var(--rotate-y, 0));
-  cursor: pointer;
-  transition: 150ms;
-  margin: 15rem;
+.card-container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2em;
+  row-gap: 1em;
+}
+
+.card {
+  display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
+  position: relative;
+  border-radius: 0.25rem;
+  border:rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px 2px rgba(228, 117, 150, 0.3);
+  background-color: #faf9f6;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateY(var(--rotate-y, 0));
+  cursor: pointer;
+  transition: 150ms;
+  margin: 1rem;
+  border: 1px solid black;
 }
 
 .card:hover {
-  box-shadow: 10px 10px 25px 10px rgba(217, 59, 106, 0.5);
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
 }
 
 .flip {
@@ -49,8 +50,8 @@ code {
 
 .front,
 .back {
-  /* position: absolute; */
-  padding: 2rem;
+  position: absolute;
+  padding: .05rem;
   backface-visibility: hidden;
   font-size: larger;
 }
@@ -59,57 +60,62 @@ code {
   transform: rotateY(180deg);
 }
 
-.prevCard {
-  /* left: calc(0% + 2rem); */
-  opacity: 0;
-}
-
-.activeCard {
-  /* left: 50%; */
-  transform: translateX(-50%);
-}
-
-.nextCard {
-  /* left: 100%; */
-  transform: translateX(calc(-100% - 2rem));
-  opacity: 0;
-}
-
-.arrow {
-  color:rgba(226, 67, 115, 0.5);
-  background-color: #faf9f6;
-  
-}
-
-.arrow-col {
-  align-items: center;
-}
-
-.card-container {
-  position: relative;
-  width: 100%;
-  height: 22rem;
-  /* margin-left: 10rem; */
-}
-
-/* .source {
+.source {
   margin-top: 2rem;
   color: #555;
   font-size: 0.8rem;
 }
 
-.carousel-indicators {
-  background-color: #080808;
-  padding: 2em 0;
-  justify-content: center;
+/* body{
+  background-color: #C8D0D2;
 }
 
-.carousel-inner {
-  background-color: aqua;
+.card-grid{
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.card{
+  display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  border-radius: .25rem;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
+  background-color: white;
+  transform-style: preserve-3d;
+  height: 250px;
+  cursor: pointer;
+  transition: 150ms;
+  transform: perspective(1000px) rotateY(var(--rotate-y, 0))
 }
 
-.button {
-  background-color: bisque;
+.card:hover{
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.card.flip{
+  --rotate-y: 180deg;
+}
+
+.card .front, .card .back{
+  position: absolute;
+  padding: 1rem;
+  backface-visibility: hidden;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+}
+
+.flashcard-options{
+  margin-top: 0.5rem
+}
+
+.flashcard-option {
+  margin-top: 0.25rem;
+  color: #555;
+  font-size: 0.8rem;
 } */
