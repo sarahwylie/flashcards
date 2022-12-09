@@ -4,22 +4,25 @@
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #c8d0d2;
+  margin: 0;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
+/* 
 body {
   background-color: #c8d0d2;
-}
+  height: 100%;
+} */
 
 .card-container {
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(4, 1fr);
   column-gap: 2em;
-  row-gap: 1em;
+  row-gap: 1em; */
 }
 
 .card {
