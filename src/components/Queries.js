@@ -88,6 +88,18 @@ const queries = [
       question: 'How do you encapsulate an object to make it private in Python?',
       answer: 'Add double underscores before and after (__object__)',
       source: 'https://learn.microsoft.com/en-us/training/modules/python-object-oriented-programming/6-exercise-game-transitions-with-methods'
+    },
+    {
+      id: 16,
+      question: 'What are JPA methods?',
+      answer: 'Pre-made query methods you can use by defining them inside the repository interface.',
+      source: 'https://www.freecodecamp.org/news/spring-boot-tutorial-build-fast-modern-java-app/'
+    },
+    {
+      id: 17,
+      question: 'What function do the Model classes serve in a Spring Boot application?',
+      answer: 'Each model class corresponds to a database table with the same name, and fields in the model class will be columns in the corresponding table.',
+      source: 'https://www.freecodecamp.org/news/spring-boot-tutorial-build-fast-modern-java-app/'
     }
   ]
 
