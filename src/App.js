@@ -22,7 +22,7 @@ const App = () => {
   // const [flip, setFlip] = useState(false);
 
   return (
-    <Box sx={{ flexGrow: 2 }} className="container">
+    <Box sx={{ flexGrow: 2 }}>
       <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
         {/* <Grid xs={12} xl={3}> */}
         {/* <Item className="card-container"> */}
